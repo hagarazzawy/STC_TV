@@ -3,7 +3,6 @@ package steps;
 import java.io.ByteArrayInputStream;
 import java.util.*;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
@@ -23,74 +22,41 @@ public class ValidateSubscriptionPackages extends TestBase {
 
 	@Given("I open STC TV page")
 	public void OpenSTCTVPage() {
-		try {
-			OpenURL(configFileReader.getApplicationUrl());
-			Assert.assertEquals(driver.getCurrentUrl(), configFileReader.getApplicationUrl());
-		} catch (Exception e) {
-			logger.error("URL is not loaded");
-			Assert.fail("URL is not loaded");
-		}
+		OpenURL(configFileReader.getApplicationUrl());
+		Assert.assertEquals(driver.getCurrentUrl(), configFileReader.getApplicationUrl());
+
 	}
 
 	@When("I click on the selected country")
 	public void ClickSelectedCountry() {
-		try {
-			homePage.ClickSelectedCountry();
-			Assert.assertTrue(homePage.isSelectCountryPopupDisplayed(), "select Country Popup is not open");
-		} catch (Exception e) {
-			logger.error("Select country pop up was not opened");
-			Assert.fail("Select country pop up was not opened");
-		}
+		homePage.ClickSelectedCountry();
+		Assert.assertTrue(homePage.isSelectCountryPopupDisplayed(), "select Country Popup is not open");
 
 	}
 
 	@When("I select country {string}")
 	public void SelectCountry(String expecetdCountry) {
-		try {
-			homePage.SelectCountry(expecetdCountry);
-			Assert.assertEquals(homePage.GetSelectedCountry(), expecetdCountry,
-					"The selected country is not " + expecetdCountry);
-		} catch (Exception e) {
-			logger.error("Country " + expecetdCountry + " wasn't selected");
-			Assert.fail("Country " + expecetdCountry + " wasn't selected");
-		}
+		homePage.SelectCountry(expecetdCountry);
+		Assert.assertEquals(homePage.GetSelectedCountry(), expecetdCountry,
+				"The selected country is not " + expecetdCountry);
 	}
 
 	@Then("the displayed plans are {string}")
 	public void CheckPlans(String expectedPlans) {
-		logger = Logger.getLogger("Assertion ");
-		try {
-			logger.info("Verifing plans");
-			Assert.assertEquals(homePage.GetPlans(), Arrays.asList(expectedPlans.split(",")));
-		} catch (Exception e) {
-			logger.error("issue in Verifing plans");
-			Assert.fail("issue in Verifing plans");
-		}
+		AssertEqualTowlists(homePage.GetPlans(), Arrays.asList(expectedPlans.split(",")));
 
 	}
 
 	@Then("the displayed prices are {string}")
 	public void CheckPrices(String expectedPrices) {
-		logger = Logger.getLogger("Assertion ");
-		try {
-			logger.info("Verifing prices");
-			Assert.assertEquals(homePage.GetPrices(), Arrays.asList(expectedPrices.split(",")));
-		} catch (Exception e) {
-			logger.error("issue in Verifing prices");
-			Assert.fail("issue in Verifing prices");
-		}
+		AssertEqualTowlists(homePage.GetPrices(), Arrays.asList(expectedPrices.split(",")));
+
 	}
 
 	@Then("the displayed currencies for each plan are {string}")
 	public void CheckCurrencies(String expectedCurrencies) {
-		logger = Logger.getLogger("Assertion ");
-		try {
-			logger.info("Verifing currencies");
-			Assert.assertEquals(homePage.GetCurrencies(), Arrays.asList(expectedCurrencies.split(",")));
-		} catch (Exception e) {
-			logger.error("issue in Verifing Currencies");
-			Assert.fail("issue in Verifing Currencies");
-		}
+		AssertEqualTowlists(homePage.GetCurrencies(), Arrays.asList(expectedCurrencies.split(",")));
+
 	}
 
 	@After

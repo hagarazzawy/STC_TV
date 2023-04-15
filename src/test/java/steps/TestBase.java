@@ -2,8 +2,12 @@ package steps;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -43,6 +47,23 @@ public class TestBase {
 
 		}
 
+	}
+
+	public void AssertEqualTowlists(ArrayList<String> actual, List<String> expected) {
+		if (expected.size() != actual.size()) {
+			logger.error("Tow lists sizes are not equal");
+		} else {
+			for (int i = 0; i < expected.size(); i++) {
+				if (actual.get(i).equals(expected.get(i)))
+					logger.info(expected.get(i) + " exist ");
+				else {
+
+					logger.error(expected.get(i) + " does not exist ");
+					Assert.fail();
+
+				}
+			}
+		}
 	}
 
 }
