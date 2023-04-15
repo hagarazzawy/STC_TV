@@ -25,10 +25,9 @@ public class PageBase {
 		}
 	}
 
-	public void ClickElement(WebDriver driver, By element_locator, String element_log) {
-		logger = Logger.getLogger("Click Element");
-		
+	public void ClickElement(WebDriver driver, By element_locator, String element_log) {		
 		Boolean flag = ElementIsDisplayed(driver, element_locator, element_log);
+		logger = Logger.getLogger("Click Element");
 		if (flag == true) {
 			WebElement element = driver.findElement(element_locator);
 			element.click();

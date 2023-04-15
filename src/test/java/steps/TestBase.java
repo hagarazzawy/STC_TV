@@ -50,6 +50,7 @@ public class TestBase {
 	}
 
 	public void AssertEqualTowlists(ArrayList<String> actual, List<String> expected) {
+		logger = Logger.getLogger("Verify tow lists are equal ");
 		if (expected.size() != actual.size()) {
 			logger.error("Tow lists sizes are not equal");
 		} else {

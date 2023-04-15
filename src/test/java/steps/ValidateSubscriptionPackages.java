@@ -23,7 +23,7 @@ public class ValidateSubscriptionPackages extends TestBase {
 	@Given("I open STC TV page")
 	public void OpenSTCTVPage() {
 		OpenURL(configFileReader.getApplicationUrl());
-		Assert.assertEquals(driver.getCurrentUrl(), configFileReader.getApplicationUrl());
+		Assert.assertEquals(driver.getCurrentUrl(), configFileReader.getApplicationUrl() , "Current URL is not the expecetd URL");
 
 	}
 
