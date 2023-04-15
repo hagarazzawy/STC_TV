@@ -1,31 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-15T05:22:58 EET" name="Default suite" finished-at="2023-04-15T05:23:24 EET" duration-ms="25640">
+  <suite started-at="2023-04-15T06:07:44 EET" name="Default suite" finished-at="2023-04-15T06:08:12 EET" duration-ms="27443">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.runner@4e7912d8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-04-15T05:22:58 EET" name="Default test" finished-at="2023-04-15T05:23:24 EET" duration-ms="25640">
+    <test started-at="2023-04-15T06:07:44 EET" name="Default test" finished-at="2023-04-15T06:08:12 EET" duration-ms="27443">
       <class name="runner.runner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T05:22:58 EET" name="setUpClass" finished-at="2023-04-15T05:22:59 EET" duration-ms="777" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T06:07:44 EET" name="setUpClass" finished-at="2023-04-15T06:07:45 EET" duration-ms="883" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@76544c0a]]>
+                <![CDATA[org.testng.TestRunner@7b61bf11]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T05:22:59 EET" name="Setup" finished-at="2023-04-15T05:23:02 EET" duration-ms="3472" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T06:07:45 EET" name="Setup" finished-at="2023-04-15T06:07:48 EET" duration-ms="3102" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T05:23:02 EET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-15T05:23:14 EET" duration-ms="11361" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T06:07:48 EET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-15T06:08:00 EET" duration-ms="11491" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate the Subscription Packages for each country"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate the Subscription Packages]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Lists differ at element [0]: 1 != 2 expected [1] but found [2]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Lists differ at element [0]: 1 != 2 expected [1] but found [2]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:1031)
+at org.testng.Assert.assertEquals(Assert.java:993)
+at steps.ValidateSubscriptionPackages.CheckPrices(ValidateSubscriptionPackages.java:61)
+at ✽.the displayed prices are "1,3,6"(file:///C:/Users/Hagar.Abdelrahman/eclipse-workspace/STC/src/test/java/feature/ValidateSubscriptionPackages.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T06:08:00 EET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-15T06:08:05 EET" duration-ms="4741" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,7 +72,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T05:23:14 EET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-15T05:23:18 EET" duration-ms="4521" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T06:08:05 EET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-15T06:08:11 EET" duration-ms="6475" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -57,27 +88,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T05:23:18 EET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-15T05:23:23 EET" duration-ms="4911" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate the Subscription Packages for each country"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate the Subscription Packages]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T05:23:23 EET" name="TearDown" finished-at="2023-04-15T05:23:24 EET" duration-ms="519" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T06:08:11 EET" name="TearDown" finished-at="2023-04-15T06:08:12 EET" duration-ms="656" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T05:23:24 EET" name="tearDownClass" finished-at="2023-04-15T05:23:24 EET" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.runner@4e7912d8]" started-at="2023-04-15T06:08:12 EET" name="tearDownClass" finished-at="2023-04-15T06:08:12 EET" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

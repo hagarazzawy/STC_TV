@@ -27,7 +27,7 @@ public class TestBase {
 
 	public static void OpenURL(String URL) {
 		logger = Logger.getLogger("Open URL ");
-		logger.info("Open URL" + URL);
+		logger.info("Open URL " + URL);
 		driver.get(URL);
 
 	}

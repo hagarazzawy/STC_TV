@@ -11,7 +11,7 @@ public class PageBase {
 	public static Logger logger = Logger.getLogger(PageBase.class);
 
 	public Boolean ElementIsDisplayed(WebDriver driver, By element_locator, String element_log) {
-		logger = Logger.getLogger("Check Element is displayed");
+		logger = Logger.getLogger("Check element is displayed");
 
 		try {
 			driver.findElement(element_locator).isDisplayed();
@@ -26,7 +26,8 @@ public class PageBase {
 	}
 
 	public void ClickElement(WebDriver driver, By element_locator, String element_log) {
-		logger = Logger.getLogger("Click Element ");
+		logger = Logger.getLogger("Click Element");
+		
 		Boolean flag = ElementIsDisplayed(driver, element_locator, element_log);
 		if (flag == true) {
 			WebElement element = driver.findElement(element_locator);
@@ -38,7 +39,6 @@ public class PageBase {
 	}
 
 	public String GetElementText(WebDriver driver, By element_locator, String elementLog) {
-
 		logger = Logger.getLogger("Get Element Text");
 		String elementText;
 		if (driver.findElement(element_locator).isDisplayed()) {
