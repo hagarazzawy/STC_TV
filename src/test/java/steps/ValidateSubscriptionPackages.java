@@ -1,86 +1,70 @@
 package steps;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.io.ByteArrayInputStream;
+import java.util.*;
 
-import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 
-import io.cucumber.java.en.And;
+import ConfigFileReader.ConfigFileReader;
+import Pages.HomePage;
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.qameta.allure.Allure;
 
-public class ValidateSubscriptionPackages extends Base {
-
-	By selectedCountry = By.id("country");
-	String selectedCountry_xpath = "//a[contains(@class,'country ')][contains(.,'{}')]";
-	By uiPlans = By.xpath("//*[@class='plan-names']//strong");
-	By uiPrices = By.xpath("//*[@class='price']//b");
-	By uiCurrencies = By.xpath("//*[@class='price']//i");
-
-	public static Logger logger = Logger.getLogger(ValidateSubscriptionPackages.class);
-	public static WebDriver driver;
-	WebDriverWait wait;
-
-	public ValidateSubscriptionPackages(WebDriver driver) {
-		ValidateSubscriptionPackages.driver = driver;
-		wait = new WebDriverWait(driver, 30);
-	}
+public class ValidateSubscriptionPackages extends TestBase {
+	HomePage homePage = new HomePage(driver);
+	ConfigFileReader configFileReader= new ConfigFileReader();
 
 	@Given("I open STC TV page")
-	public void OpenPage() {
-		OpenBrowser();
+	public void OpenSTCTVPage() {
+		OpenURL(configFileReader.getApplicationUrl());
 	}
 
 	@When("I click on the selected country")
 	public void ClickSelectedCountry() {
-		ClickElement(driver, selectedCountry, "selectedCountry");
+		homePage.ClickSelectedCountry();
+		Assert.assertTrue(homePage.isSelectCountryPopupDisplayed(), "select Country Popup is not open");
 
 	}
 
-	@And("I select {string}")
+	@When("I select country {string}")
 	public void SelectCountry(String expecetdCountry) {
-		wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.xpath(selectedCountry_xpath.format(expecetdCountry))));
-		ClickElement(driver, By.xpath(selectedCountry_xpath.format(expecetdCountry)), "selectedCountry");
+		homePage.SelectCountry(expecetdCountry);
+		Assert.assertEquals(homePage.GetSelectedCountry(), expecetdCountry,
+				"The selected country is not " + expecetdCountry);
+
 	}
 
 	@Then("the displayed plans are {string}")
 	public void CheckPlans(String expectedPlans) {
-		ArrayList<String> actualPlans = new ArrayList<String>();
-		List<WebElement> plans = driver.findElements(uiPlans);
-		for (WebElement plan : plans) {
-			actualPlans.add(plan.getText());
-		}
-		Assert.assertEquals(actualPlans, Arrays.asList(expectedPlans.split(",")));
+		logger.info("Verifing plans");
+		Assert.assertEquals(homePage.GetPlans(), Arrays.asList(expectedPlans.split(",")));
 
 	}
 
-	@And("the displayed prices are {string}")
+	@Then("the displayed prices are {string}")
 	public void CheckPrices(String expectedPrices) {
-		ArrayList<String> actualPrices = new ArrayList<String>();
-		List<WebElement> prices = driver.findElements(uiPrices);
-		for (WebElement price : prices) {
-			actualPrices.add(price.getText());
-		}
-		Assert.assertEquals(actualPrices, Arrays.asList(expectedPrices.split(",")));
+		logger.info("Verifing prices");
+		Assert.assertEquals(homePage.GetPrices(), Arrays.asList(expectedPrices.split(",")));
 	}
 
-	@And("the displayed currencies for each plan are {string}")
+	@Then("the displayed currencies for each plan are {string}")
 	public void CheckCurrencies(String expectedCurrencies) {
-		ArrayList<String> actualCurrencies = new ArrayList<String>();
-		List<WebElement> currencies = driver.findElements(uiCurrencies);
-		for (WebElement currency : currencies) {
-			actualCurrencies.add(currency.getText());
+		logger.info("Verifing currencies");
+		Assert.assertEquals(homePage.GetCurrencies(), Arrays.asList(expectedCurrencies.split(",")));
+	}
+
+	@After
+	public void TearDown(Scenario scenario) {
+		if (scenario.isFailed()) {
+			byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+			Allure.addAttachment("Screenshot with the failure", new ByteArrayInputStream(screenshot));
 		}
-		Assert.assertEquals(actualCurrencies, Arrays.asList(expectedCurrencies.split(",")));
 	}
 
 }

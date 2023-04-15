@@ -1,0 +1,32 @@
+2023-04-15 05:23:02,500 - Open browser  -INFO - Opening Browser ...
+2023-04-15 05:23:03,441 - Open URL  -INFO - Open URLhttps://subscribe.stctv.com/sa-en?
+2023-04-15 05:23:11,030 - Check Element is displayed -INFO - selectedCountry is Displayed successfully
+2023-04-15 05:23:11,126 - Check Element is displayed -INFO - Click on selectedCountry
+2023-04-15 05:23:11,220 - Check Element is displayed -INFO - select Country Popup is Displayed successfully
+2023-04-15 05:23:11,524 - Check Element is displayed -INFO - Bahrain is Displayed successfully
+2023-04-15 05:23:13,625 - Check Element is displayed -INFO - Click on Bahrain
+2023-04-15 05:23:13,847 - Get Element Text -INFO - The selected Country text is Bahrain
+2023-04-15 05:23:13,850 - Open URL  -INFO - Verifing plans
+2023-04-15 05:23:13,957 - Open URL  -INFO - Verifing prices
+2023-04-15 05:23:14,062 - Open URL  -INFO - Verifing currencies
+2023-04-15 05:23:14,394 - Open URL  -INFO - Open URLhttps://subscribe.stctv.com/sa-en?
+2023-04-15 05:23:16,346 - Check Element is displayed -INFO - selectedCountry is Displayed successfully
+2023-04-15 05:23:16,430 - Check Element is displayed -INFO - Click on selectedCountry
+2023-04-15 05:23:16,497 - Check Element is displayed -INFO - select Country Popup is Displayed successfully
+2023-04-15 05:23:16,629 - Check Element is displayed -INFO - KSA is Displayed successfully
+2023-04-15 05:23:18,529 - Check Element is displayed -INFO - Click on KSA
+2023-04-15 05:23:18,609 - Get Element Text -INFO - The selected Country text is KSA
+2023-04-15 05:23:18,611 - Open URL  -INFO - Verifing plans
+2023-04-15 05:23:18,691 - Open URL  -INFO - Verifing prices
+2023-04-15 05:23:18,765 - Open URL  -INFO - Verifing currencies
+2023-04-15 05:23:18,905 - Open URL  -INFO - Open URLhttps://subscribe.stctv.com/sa-en?
+2023-04-15 05:23:20,583 - Check Element is displayed -INFO - selectedCountry is Displayed successfully
+2023-04-15 05:23:20,710 - Check Element is displayed -INFO - Click on selectedCountry
+2023-04-15 05:23:20,783 - Check Element is displayed -INFO - select Country Popup is Displayed successfully
+2023-04-15 05:23:20,957 - Check Element is displayed -INFO - Kuwait is Displayed successfully
+2023-04-15 05:23:23,446 - Check Element is displayed -INFO - Click on Kuwait
+2023-04-15 05:23:23,537 - Get Element Text -INFO - The selected Country text is Kuwait
+2023-04-15 05:23:23,540 - Open URL  -INFO - Verifing plans
+2023-04-15 05:23:23,610 - Open URL  -INFO - Verifing prices
+2023-04-15 05:23:23,678 - Open URL  -INFO - Verifing currencies
+2023-04-15 05:23:24,318 - Close browser  -INFO - Close Browser ...

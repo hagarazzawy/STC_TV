@@ -1,35 +1,14 @@
-package steps;
+package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.apache.log4j.Logger;
 
-public class Base {
+public class PageBase {
 	static WebDriver driver;
-	public static Logger logger = Logger.getLogger(Base.class);
-
-	public void OpenBrowser() {
-		logger = Logger.getLogger("Open browser ");
-		String URL = "https://subscribe.stctv.com/sa-en";
-		try {
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-
-		} catch (Exception ex) {
-			logger.error("Open browser " + ex.getMessage());
-		}
-
-		logger.info("Opening Browser ...");
-		logger.info("Open URL = " + URL);
-		driver.get(URL);
-		driver.manage().window().setSize(new Dimension(1024, 768));
-	}
+	public static Logger logger = Logger.getLogger(PageBase.class);
 
 	public Boolean ElementIsDisplayed(WebDriver driver, By element_locator, String element_log) {
 		logger = Logger.getLogger("Check Element is displayed");
@@ -56,6 +35,21 @@ public class Base {
 		} else {
 			logger.error("Cannot Click on " + element_log);
 		}
+	}
+
+	public String GetElementText(WebDriver driver, By element_locator, String elementLog) {
+
+		logger = Logger.getLogger("Get Element Text");
+		String elementText;
+		if (driver.findElement(element_locator).isDisplayed()) {
+			elementText = driver.findElement(element_locator).getText();
+			logger.info(elementLog + " text is " + elementText);
+			return elementText;
+		} else {
+			logger.error(elementLog + " text is not Displayed");
+			return "";
+		}
+
 	}
 
 }
