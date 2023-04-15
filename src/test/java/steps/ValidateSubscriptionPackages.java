@@ -96,9 +96,13 @@ public class ValidateSubscriptionPackages extends TestBase {
 	@After
 	public void TearDown(Scenario scenario) {
 		if (scenario.isFailed()) {
-			byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-			Allure.addAttachment("Screenshot with the failure", new ByteArrayInputStream(screenshot));
+			try {
+				byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+				Allure.addAttachment("Screenshot with the failure", new ByteArrayInputStream(screenshot));
+			} catch (Exception e) {
+				logger.error("couldn't take a screenshot for the failed scenario");
+				Assert.fail("couldn't take a screenshot for the failed scenario");
+			}
 		}
 	}
-
 }
