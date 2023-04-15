@@ -23,21 +23,37 @@ public class ValidateSubscriptionPackages extends TestBase {
 
 	@Given("I open STC TV page")
 	public void OpenSTCTVPage() {
-		OpenURL(configFileReader.getApplicationUrl());
+		try {
+			OpenURL(configFileReader.getApplicationUrl());
+			Assert.assertEquals(driver.getCurrentUrl(), configFileReader.getApplicationUrl());
+		} catch (Exception e) {
+			logger.error("URL is not loaded");
+			Assert.fail("URL is not loaded");
+		}
 	}
 
 	@When("I click on the selected country")
 	public void ClickSelectedCountry() {
-		homePage.ClickSelectedCountry();
-		Assert.assertTrue(homePage.isSelectCountryPopupDisplayed(), "select Country Popup is not open");
+		try {
+			homePage.ClickSelectedCountry();
+			Assert.assertTrue(homePage.isSelectCountryPopupDisplayed(), "select Country Popup is not open");
+		} catch (Exception e) {
+			logger.error("Select country pop up was not opened");
+			Assert.fail("Select country pop up was not opened");
+		}
 
 	}
 
 	@When("I select country {string}")
 	public void SelectCountry(String expecetdCountry) {
-		homePage.SelectCountry(expecetdCountry);
-		Assert.assertEquals(homePage.GetSelectedCountry(), expecetdCountry,
-				"The selected country is not " + expecetdCountry);
+		try {
+			homePage.SelectCountry(expecetdCountry);
+			Assert.assertEquals(homePage.GetSelectedCountry(), expecetdCountry,
+					"The selected country is not " + expecetdCountry);
+		} catch (Exception e) {
+			logger.error("Country " + expecetdCountry + " wasn't selected");
+			Assert.fail("Country " + expecetdCountry + " wasn't selected");
+		}
 	}
 
 	@Then("the displayed plans are {string}")
