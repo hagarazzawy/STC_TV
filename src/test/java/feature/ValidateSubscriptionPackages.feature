@@ -10,9 +10,11 @@ Feature: Validate the Subscription Packages
     
     Examples:
     |	country		|	plans									|	prices			|	currencies	|	
-    |	Bahrain		|	LITE,CLASSIC,PREMIUM	|	1,3,6    		|	BHD,BHD,BHD	|
+    |	Bahrain		|	LITE,CLASSIC,PREMIUM	|	2,3,6    		|	BHD,BHD,BHD	|
 		|	KSA				|	LITE,CLASSIC,PREMIUM	|	15,25,60		|	SAR,SAR,SAR	|	
 		|	Kuwait		|	LITE,CLASSIC,PREMIUM	|	1.2,2.5,4.8	|	KWD,KWD,KWD	|
-
+	  |	Bahrain		|	LITE,CLASSIC,PREMIUM	|	1,3,6    		|	BHD,BHD,BHD	|
+		|	Kuwait		|	LITE,CLASSIC,PREMIUM	|	1.2,2.5,4.8	|	SAR,KWD,KWD	|
+		
 	
 
