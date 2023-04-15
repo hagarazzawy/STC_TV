@@ -614,3 +614,85 @@
 2023-04-15 06:08:11,487 [main] INFO Assertion  - Verifing prices
 2023-04-15 06:08:11,545 [main] INFO Assertion  - Verifing currencies
 2023-04-15 06:08:12,309 [main] INFO Close browser  - Close Browser ...
+2023-04-15 06:20:46,619 [main] INFO Open browser  - Opening Browser ...
+2023-04-15 06:20:47,639 [main] INFO Open URL  - Open URL https://subscribe.stctv.com/sa-en
+2023-04-15 06:20:56,139 [main] INFO Check element is displayed - selectedCountry is Displayed successfully
+2023-04-15 06:20:56,259 [main] INFO Check element is displayed - Click on selectedCountry
+2023-04-15 06:20:56,358 [main] INFO Check element is displayed - select Country Popup is Displayed successfully
+2023-04-15 06:20:56,576 [main] INFO Check element is displayed - Bahrain is Displayed successfully
+2023-04-15 06:20:59,483 [main] INFO Check element is displayed - Click on Bahrain
+2023-04-15 06:20:59,673 [main] INFO Get Element Text - The selected Country text is Bahrain
+2023-04-15 06:20:59,676 [main] INFO Assertion  - Verifing plans
+2023-04-15 06:20:59,755 [main] INFO Assertion  - Verifing prices
+2023-04-15 06:21:00,271 [main] INFO Open URL  - Open URL https://subscribe.stctv.com/sa-en
+2023-04-15 06:21:02,232 [main] INFO Check element is displayed - selectedCountry is Displayed successfully
+2023-04-15 06:21:02,347 [main] INFO Check element is displayed - Click on selectedCountry
+2023-04-15 06:21:02,429 [main] INFO Check element is displayed - select Country Popup is Displayed successfully
+2023-04-15 06:21:02,550 [main] INFO Check element is displayed - KSA is Displayed successfully
+2023-04-15 06:21:04,298 [main] INFO Check element is displayed - Click on KSA
+2023-04-15 06:21:04,367 [main] INFO Get Element Text - The selected Country text is KSA
+2023-04-15 06:21:04,369 [main] INFO Assertion  - Verifing plans
+2023-04-15 06:21:04,451 [main] INFO Assertion  - Verifing prices
+2023-04-15 06:21:04,538 [main] INFO Assertion  - Verifing currencies
+2023-04-15 06:21:04,694 [main] INFO Open URL  - Open URL https://subscribe.stctv.com/sa-en
+2023-04-15 06:21:06,744 [main] INFO Check element is displayed - selectedCountry is Displayed successfully
+2023-04-15 06:21:06,837 [main] INFO Check element is displayed - Click on selectedCountry
+2023-04-15 06:21:06,912 [main] INFO Check element is displayed - select Country Popup is Displayed successfully
+2023-04-15 06:21:07,038 [main] INFO Check element is displayed - Kuwait is Displayed successfully
+2023-04-15 06:21:10,282 [main] INFO Check element is displayed - Click on Kuwait
+2023-04-15 06:21:10,384 [main] INFO Get Element Text - The selected Country text is Kuwait
+2023-04-15 06:21:10,385 [main] INFO Assertion  - Verifing plans
+2023-04-15 06:21:10,483 [main] INFO Assertion  - Verifing prices
+2023-04-15 06:21:10,567 [main] INFO Assertion  - Verifing currencies
+2023-04-15 06:21:11,461 [main] INFO Close browser  - Close Browser ...
+2023-04-15 06:25:37,852 [main] INFO Open browser  - Opening Browser ...
+2023-04-15 06:25:38,612 [main] INFO Open URL  - Open URL https://subscribe.stctv.com/sa-en
+2023-04-15 06:25:43,808 [main] INFO Check element is displayed - selectedCountry is Displayed successfully
+2023-04-15 06:25:43,884 [main] INFO Check element is displayed - Click on selectedCountry
+2023-04-15 06:25:43,963 [main] INFO Check element is displayed - select Country Popup is Displayed successfully
+2023-04-15 06:25:44,200 [main] INFO Check element is displayed - Bahrain is Displayed successfully
+2023-04-15 06:25:46,266 [main] INFO Check element is displayed - Click on Bahrain
+2023-04-15 06:25:46,449 [main] INFO Get Element Text - The selected Country text is Bahrain
+2023-04-15 06:25:46,451 [main] INFO Assertion  - Verifing plans
+2023-04-15 06:25:46,546 [main] INFO Assertion  - Verifing prices
+2023-04-15 06:25:46,639 [main] INFO Assertion  - Verifing currencies
+2023-04-15 06:25:46,970 [main] INFO Open URL  - Open URL https://subscribe.stctv.com/sa-en
+2023-04-15 06:25:48,756 [main] INFO Check element is displayed - selectedCountry is Displayed successfully
+2023-04-15 06:25:48,841 [main] INFO Check element is displayed - Click on selectedCountry
+2023-04-15 06:25:48,956 [main] INFO Check element is displayed - select Country Popup is Displayed successfully
+2023-04-15 06:25:49,220 [main] INFO Check element is displayed - KSA is Displayed successfully
+2023-04-15 06:25:51,027 [main] INFO Check element is displayed - Click on KSA
+2023-04-15 06:25:51,100 [main] INFO Get Element Text - The selected Country text is KSA
+2023-04-15 06:25:51,102 [main] INFO Assertion  - Verifing plans
+2023-04-15 06:25:51,178 [main] INFO Assertion  - Verifing prices
+2023-04-15 06:25:51,263 [main] INFO Assertion  - Verifing currencies
+2023-04-15 06:25:51,425 [main] INFO Open URL  - Open URL https://subscribe.stctv.com/sa-en
+2023-04-15 06:25:53,165 [main] INFO Check element is displayed - selectedCountry is Displayed successfully
+2023-04-15 06:25:53,409 [main] INFO Check element is displayed - Click on selectedCountry
+2023-04-15 06:25:53,485 [main] INFO Check element is displayed - select Country Popup is Displayed successfully
+2023-04-15 06:25:53,610 [main] INFO Check element is displayed - Kuwait is Displayed successfully
+2023-04-15 06:25:57,276 [main] INFO Check element is displayed - Click on Kuwait
+2023-04-15 06:25:57,357 [main] INFO Get Element Text - The selected Country text is Kuwait
+2023-04-15 06:25:57,359 [main] INFO Assertion  - Verifing plans
+2023-04-15 06:25:57,445 [main] INFO Assertion  - Verifing prices
+2023-04-15 06:25:57,529 [main] INFO Assertion  - Verifing currencies
+2023-04-15 06:25:57,732 [main] INFO Open URL  - Open URL https://subscribe.stctv.com/sa-en
+2023-04-15 06:25:59,487 [main] INFO Check element is displayed - selectedCountry is Displayed successfully
+2023-04-15 06:25:59,572 [main] INFO Check element is displayed - Click on selectedCountry
+2023-04-15 06:25:59,653 [main] INFO Check element is displayed - select Country Popup is Displayed successfully
+2023-04-15 06:25:59,787 [main] INFO Check element is displayed - Bahrain is Displayed successfully
+2023-04-15 06:26:01,751 [main] INFO Check element is displayed - Click on Bahrain
+2023-04-15 06:26:01,832 [main] INFO Get Element Text - The selected Country text is Bahrain
+2023-04-15 06:26:01,834 [main] INFO Assertion  - Verifing plans
+2023-04-15 06:26:01,926 [main] INFO Assertion  - Verifing prices
+2023-04-15 06:26:02,280 [main] INFO Open URL  - Open URL https://subscribe.stctv.com/sa-en
+2023-04-15 06:26:03,967 [main] INFO Check element is displayed - selectedCountry is Displayed successfully
+2023-04-15 06:26:04,046 [main] INFO Check element is displayed - Click on selectedCountry
+2023-04-15 06:26:04,118 [main] INFO Check element is displayed - select Country Popup is Displayed successfully
+2023-04-15 06:26:04,213 [main] INFO Check element is displayed - Kuwait is Displayed successfully
+2023-04-15 06:26:06,079 [main] INFO Check element is displayed - Click on Kuwait
+2023-04-15 06:26:06,307 [main] INFO Get Element Text - The selected Country text is Kuwait
+2023-04-15 06:26:06,309 [main] INFO Assertion  - Verifing plans
+2023-04-15 06:26:06,377 [main] INFO Assertion  - Verifing prices
+2023-04-15 06:26:06,450 [main] INFO Assertion  - Verifing currencies
+2023-04-15 06:26:07,688 [main] INFO Close browser  - Close Browser ...
